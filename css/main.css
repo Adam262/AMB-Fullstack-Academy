@@ -4,12 +4,67 @@
    Author's custom styles
    ========================================================================== */
 
+/* 
+css best practices
+  * add normalize before main css on index.html
+  * use comments to divide main.css into sections that mirror index.html
+
+html best practices
+  * use div, section to divide spaces of main section 
+  * use comments to label closing tag of div, section, etc
+
+*/
+/* /// GLOBAL/// */
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+/* /// HEADER ///*/
+
+/* /// NAV ///*/
+a {
+  text-decoration: none; /*removes links from underline */
+}
+
+li {
+  list-style: none; /*removes bullers from <li>*/
+  display: inline;
+  margin: 15px;
+}
+/*/// .WRAPPER ///*/
+body {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.col-1 {
+  float: left;
+  width: 300px;
+  margin: 10px;
+}
+
+.col-2 {
+  float: left;
+  width: 300px;
+  margin: 10px;
+
+.col-3 {
+  float: left;
+  width: 300px;
+  margin: 10px;
+}
+
+/* /// FOOTER ///*/
 
 
 
 
 
-h1 {color: white}
+
 
 
 
