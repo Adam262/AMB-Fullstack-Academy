@@ -5,8 +5,8 @@
 	<title> Adam Barcan | Portfolio </title>
 	<link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
 	<link rel = "stylesheet" href = "css/main.css">
+	<link rel = "stylesheet" href = "css/responsive.css">
 	<!-- Put main.css after normalize. We do not want Normalize to overwrite our styles-->
-	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
  	
 </head>
 
@@ -15,17 +15,21 @@
 	<header id = "top">
 		<h1> Adam Barcan</h1>
 		<h2> Web Developer + Photographer </h2>
-		<img src="https://farm4.staticflickr.com/3667/13771266545_99cbdf42f4_n.jpg" width="320" height="213" alt="20140403-IMG_4972.jpg" alt = "Adam Barcan" title = "In London, pondering the next project">
-	 </header class = "gradient">
+		<img id = "profile_pic"src="https://farm4.staticflickr.com/3667/13771266545_99cbdf42f4_n.jpg"  alt="20140403-IMG_4972.jpg" alt = "Adam Barcan" title = "In London, pondering the next drop shadow. Or the next five o'clock shadow.">
 		<nav>
-			<ul>
+			<ul class = "menu-links">
 				<li><a href = "#about">About Me</a></li>
 				<li><a href = "#photo"> Photo Portfolio</a></li>
 				<li><a href = "#codercred">Coder Cred</a></li>
 				<li><a href = "#projects">Recent Projects</a></li>
+				<li><a href = "#projects">Get in Touch</a></li>
 			</ul>
 		</nav>
+	</header> <!-- id = "top"-->
+		
+	
 </div> <!-- class = 'wrapperhead'-->
+
 	<div class = "wrapper clearfix" >
 		<section id = "about"> 
 			<a href = "#top"> <img src = "http://upload.wikimedia.org/wikipedia/en/7/76/Usain_Bolt,_Anniversary_Games,_London_2013.jpg" title = "To the top!" alt = "To the top" height = "53" width = "43"></a>
@@ -45,7 +49,7 @@
 					<div class = "col-3">
 						<h4>Work</h4>
 							<p>Adam Barcan Photography</p>
-							<p>McDermott Will & Emery, Business Analyst</p>
+							<p>McDermott Will &amp; Emery, Business Analyst</p>
 							<p>Department of the Treasury, Macroeconomist</p>
 							<p>Fitch Ratings, Banking Analyst</p>
 							<p>Rutgers University, Spanish and Portguese Instructor</p>
@@ -54,6 +58,22 @@
 		<section id = "photo">  
 			<h3> Photo Portfolio </h3>
 					<a href = "#top"> <img src = "http://upload.wikimedia.org/wikipedia/en/7/76/Usain_Bolt,_Anniversary_Games,_London_2013.jpg" title = "To the top!" alt = "To the top" height = "53" width = "43"></a>
+				<div class="galleria">
+    			<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/53565dbae4b00e062357aab6/53565e81e4b04b5c0a1d7d94/1398169226185/20140413-IMG_2591.jpg?format=750w" height = "200"; width = "300">
+    			<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/5361c9cce4b0c9d8aaa7d26f/53647409e4b0f0c8a1bc06c9/1399092247518/20140427-IMG_2721.jpg?format=500w" height = "200"; width = "133">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/5361c9cce4b0c9d8aaa7d26f/536857d7e4b01e9923edf505/1399347162122/IMG_2878.jpg?format=750w" height = "200" width = "300">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/529d67cee4b0ba861575e650/529d67f5e4b0c890a4a36231/1386047481426/IMG_3742.jpg?format=500w" height = "200" width = "133">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/528a7072e4b07746bc28868e/534322e7e4b0010b0d9b2274/1397162263753/20140406-IMG_5119.jpg?format=750w" height = "200" width = "300">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/528a7083e4b021325e31b02b/52efdcf8e4b0358dd4dff89f/1391451392381/IMG_4742.jpg?format=750w" height = "200" width = "300">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/528a7083e4b021325e31b02b/52bdaaace4b0dbabcef264dd/1388161851518/11578266373_352495dfd1_b.jpg?format=500w" height = "200" width = "133">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/53565dbae4b00e062357aab6/53565ec4e4b049723f6f62d0/1398169315343/20140413-IMG_2637.jpg?format=750w" height = "200" width = "300">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/5361c9cce4b0c9d8aaa7d26f/53647409e4b07ba113ff0044/1399092235724/20140427-IMG_2743.jpg?format=500w" height = "200" width = "133">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/529d67cee4b0ba861575e650/529d6809e4b0c890a4a36252/1386047498815/IMG_3810.jpg?format=750w" height = "200" width = "300">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/5361c9cce4b0c9d8aaa7d26f/536857dbe4b0b47b7994e6d0/1399347166007/IMG_2986.jpg?format=500w" height = "200" width = "133">
+	    		<img src="http://static.squarespace.com/static/528a6b99e4b021325e31a5c9/528a7072e4b07746bc28868e/529ac0a3e4b044b187f6b742/1397162325506/f24463168.jpg?format=750w" height = "200" width = "300">
+
+				</div>
+
 		</section> <!-- id = 'photo'-->
 		<section id = "codercred"> 
 			<h3> Coder Cred </h3>
@@ -72,13 +92,21 @@
 </li>
 </ul>
 		</section> <!-- id = 'codercred'-->
-	<section id = "projects">  
+		<section id = "projects">  
 			<h3> Recent Projects </h3>
 					<a href = "#top"> <img src = "http://upload.wikimedia.org/wikipedia/en/7/76/Usain_Bolt,_Anniversary_Games,_London_2013.jpg" title = "To the top!" alt = "To the top" height = "53" width = "43"></a>
 		</section> <!-- id = 'projects'-->
+		<section id = "contact">  
+			<h3> Get in Touch </h3>
+					<a href = "#top"> <img src = "http://upload.wikimedia.org/wikipedia/en/7/76/Usain_Bolt,_Anniversary_Games,_London_2013.jpg" title = "To the top!" alt = "To the top" height = "53" width = "43"></a>
+		</section> <!-- id = 'contact'-->
 		<footer>
 			  <p id = "footer">&copy; 2014 Adam Barcan.</p>
 		</footer>
 	</div> <!--class = 'wrapper'-->
+<script src = "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+<script src = "galleria/galleria-1.3.5.min.js"></script>
+<script src = "js/main.js"></script>
+<!-- By best practice, put JS links at bottom of page-->
 </body>
 </html>

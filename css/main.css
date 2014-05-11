@@ -6,14 +6,21 @@
 css best practices 
   * add normalize before main css on index.html 
   * use comments to divide main.css into sections that mirror index.html 
-  
+  * make separate responsive .css based on three techniques: fluid images (max-width: 100%), fluid grid and media queries;
+  * good break points are below, applied in cascading order:;
+              480px (phone landscape, small tablet); 
+              660px (large tablet, normal desktop);
+
 html best practices 
   * use div, section to divide spaces of main section  
   * use comments to label closing tag of div, section, etc 
+  * add js scripts and links at bottom of body, not in head
+  * remember, & is &amp; copyright is &copy;
   
 */
 
 /* /// GLOBAL/// */
+
 .clearfix:after { 
    content: " "; /* Older browser do not support empty content */
    visibility: hidden; 
@@ -25,41 +32,40 @@ html best practices
 @import url(http://fonts.googleapis.com/css?family=Raleway);
 @import url(http://fonts.googleapis.com/css?family=Francois+One); 
  
-/* /// HEADER ///*/
 
-.wrapperhead {
-	max-width: 960px; 
-	text-align: center; /* easily centers header text*/
-	margin: 0 auto; /* easily centers wrapper element in browser window*/
-	padding: 1%;
-}
 
-	h1 {
-		font: 3em 'Francois One', sans-sarif;
-		font-weight: 400;
-		
-		}
-	h2 {
+/*////  HEADINGS////*/
 
-		font: 1.5em 'Francois One', sans-sarif;
-		font-weight: 400;
+h1 {
+	font: 3em 'Francois One', sans-sarif;
+	font-weight: 400;
+	
+	}
+h2 {
 
-}
+	font: 1.5em 'Francois One', sans-sarif;
+	font-weight: 400;
+  }
 
-.gradient {background: -moz-linear-gradient(top, rgba(155,192,235,0) 0%, rgba(155,192,235,0.8) 15%, rgba(155,192,235,1) 19%, rgba(155,192,235,1) 20%, rgba(176,211,240,1) 50%, rgba(156,193,235,1) 81%, rgba(155,192,235,0.95) 82%, rgba(155,192,235,0.8) 85%, rgba(155,192,235,0) 100%); /* FF3.6+ */
-background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(155,192,235,0)), color-stop(15%,rgba(155,192,235,0.8)), color-stop(19%,rgba(155,192,235,1)), color-stop(20%,rgba(155,192,235,1)), color-stop(50%,rgba(176,211,240,1)), color-stop(81%,rgba(156,193,235,1)), color-stop(82%,rgba(155,192,235,0.95)), color-stop(85%,rgba(155,192,235,0.8)), color-stop(100%,rgba(155,192,235,0))); /* Chrome,Safari4+ */
-background: -webkit-linear-gradient(top, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* Chrome10+,Safari5.1+ */
-background: -o-linear-gradient(top, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* Opera 11.10+ */
-background: -ms-linear-gradient(top, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* IE10+ */
-background: linear-gradient(to bottom, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* W3C */
-filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bc0eb', endColorstr='#009bc0eb',GradientType=0 ); /* IE6-9 */
-}
+h3 {
+clear: both; /* this clear propery is very useful to align elements in float */
+  }
   
-/* /// NAV ///*/
+/* /// NAV + LINKS ///*/
 nav {
 	max-width: 960px; 
   	margin: 0 auto; /* creates large l/r margins to center 	header*/
 	position: relative;
+    }
+
+li { 
+  list-style: none; /*removes bullets from <li>*/
+  display: inline; 
+  margin: 15px; 
+} 
+
+#codercred li { 
+  margin: 5%; 
 }
 
 a, a:visited{ 
@@ -74,13 +80,15 @@ a.selected, a:hover {
 	color: #3366cc;
 }
  
-li { 
-  list-style: none; /*removes bullets from <li>*/
-  display: inline; 
-  margin: 15px; 
-} 
-/*/// .WRAPPER ///*/
 
+
+/*/// .WRAPPER ///*/
+.wrapperhead {
+  max-width: 960px; 
+  text-align: center; /* easily centers header text*/
+  margin: 0 auto; /* easily centers wrapper element in browser window*/
+  padding: 1%;
+}
 
 .wrapper{ 
   	max-width: 960px; 
@@ -91,6 +99,7 @@ li {
 	text-align: justify;
 	font: 0.9em 'raleway', sans-sarif; 
 	font-weight: 400;
+  z-index: 1;
 	
 } 
   
@@ -114,21 +123,40 @@ li {
  	
 } 
 
-h3 {
-clear: both; /* this clear propery is very useful to align elements in float */
+/*// GRAPHICS + IMAGES /// */
+.gradient {background: -moz-linear-gradient(top, rgba(155,192,235,0) 0%, rgba(155,192,235,0.8) 15%, rgba(155,192,235,1) 19%, rgba(155,192,235,1) 20%, rgba(176,211,240,1) 50%, rgba(156,193,235,1) 81%, rgba(155,192,235,0.95) 82%, rgba(155,192,235,0.8) 85%, rgba(155,192,235,0) 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(155,192,235,0)), color-stop(15%,rgba(155,192,235,0.8)), color-stop(19%,rgba(155,192,235,1)), color-stop(20%,rgba(155,192,235,1)), color-stop(50%,rgba(176,211,240,1)), color-stop(81%,rgba(156,193,235,1)), color-stop(82%,rgba(155,192,235,0.95)), color-stop(85%,rgba(155,192,235,0.8)), color-stop(100%,rgba(155,192,235,0))); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* IE10+ */
+background: linear-gradient(to bottom, rgba(155,192,235,0) 0%,rgba(155,192,235,0.8) 15%,rgba(155,192,235,1) 19%,rgba(155,192,235,1) 20%,rgba(176,211,240,1) 50%,rgba(156,193,235,1) 81%,rgba(155,192,235,0.95) 82%,rgba(155,192,235,0.8) 85%,rgba(155,192,235,0) 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bc0eb', endColorstr='#009bc0eb',GradientType=0 ); /* IE6-9 */
 }
 
-#codercred li { 
-  list-style: none; /*removes bullets from <li>*/
-  display: inline; 
-  margin: 5%; 
+#profile_pic {
+  max-width=300px; 
+  max-height=300px;
+  display: block;
+  margin: 5% auto;
+  border-radius: 100%;
+  box-shadow: 10px 10px 5px #888888;
+  z-index: 1;
 }
+
+.galleria {
+
+    width: 700px; 
+    height: 400px; 
+    background-color: #F5F5F5;
+    margin: 0 auto;
+   }
   
 /* /// FOOTER ///*/
 
 footer {
 	font: 0.75em;
 	text-align: center;
+  clear: both;
 }
 
 
