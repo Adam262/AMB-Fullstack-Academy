@@ -16,6 +16,8 @@ html best practices
   * use comments to label closing tag of div, section, etc 
   * add js scripts and links at bottom of body, not in head
   * remember, & is &amp; copyright is &copy;
+  * add viewport meta for mobile devices!
+  * make all external links target="_blank"
   
 */
 
@@ -64,7 +66,7 @@ li {
   margin: 15px; 
 } 
 
-#codercred li { 
+#codercred li, #contact li { 
   margin: 5%; 
 }
 
@@ -119,7 +121,7 @@ a.selected, a:hover {
 .col-3 { 
   	float: left; 
   	width: 28%; 
-  	margin: 0 1% 0 1%;
+  	margin: 0 0 0 2%;
  	
 } 
 
@@ -134,8 +136,8 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bc0eb', e
 }
 
 #profile_pic {
-  max-width=300px; 
-  max-height=300px;
+  max-width=90%; 
+  max-height=90%;
   display: block;
   margin: 5% auto;
   border-radius: 100%;
@@ -150,7 +152,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bc0eb', e
     background-color: #F5F5F5;
     margin: 0 auto;
    }
-  
+
+#pinterest {
+  border-radius: 100%;
+}
 /* /// FOOTER ///*/
 
 footer {
