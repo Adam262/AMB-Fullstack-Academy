@@ -81,8 +81,18 @@ a, a:visited{
 a.selected, a:hover {
 	color: #3366cc;
 }
- 
 
+#fiddle {
+   border-radius: 100%;
+} 
+img:hover  {
+border: 1px dashed #555;
+}
+
+li a img:hover {
+  border: 1px dashed #555;
+  border-radius: 100%;
+}
 
 /*/// .WRAPPER ///*/
 .wrapperhead {
@@ -107,14 +117,14 @@ a.selected, a:hover {
   
 .col-1 { 
   	float: left; 
-  	width: 30%;
+  	width: 28%;
   	margin: 0 1% 0 1% ;
 
 } 
   
 .col-2 { 
   	float: left; 
-	width: 24%; 
+	width: 25%; 
   	margin: 0 1% 0 10%;
  	
  } 
@@ -136,8 +146,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bc0eb', e
 }
 
 #profile_pic {
-  max-width=90%; 
-  max-height=90%;
+  max-width=100%; 
   display: block;
   margin: 5% auto;
   border-radius: 100%;
@@ -147,7 +156,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#009bc0eb', e
 
 .galleria {
 
-    width: 700px; 
+    max-width: 700px; 
     height: 400px; 
     background-color: #F5F5F5;
     margin: 0 auto;
