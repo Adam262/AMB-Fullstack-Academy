@@ -1,1 +1,0 @@
-This is my portfolio site for web development and photography. 
